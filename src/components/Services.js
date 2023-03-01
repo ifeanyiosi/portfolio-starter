@@ -5,33 +5,21 @@ import { fadeIn } from "../variants";
 
 const services = [
   {
-    name: "SourceMyGadgets Website",
-    description: "",
+    name: "Front-End Developer",
+    description:
+      "As a front-end developer, my primary focus is on creating visually appealing and user-friendly websites and applications using web technologies such as HTML, CSS, JavaScript and React (Typescript too). My goal is to provide an exceptional user experience, regardless of the device or platform being used.",
     link: "Learn more",
   },
   {
-    name: "SaveToBuy Landing Page",
-    description: "",
+    name: "React Native Developer",
+    description:
+      "As a React Native developer, my focus is on building mobile applications that are both visually appealing and functionally efficient. React Native is a popular framework that allows me to create cross-platform applications using JavaScript and React.",
     link: "Learn more",
   },
   {
-    name: "SaveToBuy Homepage",
-    description: "",
-    link: "Learn more",
-  },
-  {
-    name: "Nike E-commerce page",
-    description: "",
-    link: "Learn more",
-  },
-  {
-    name: "PWA Weather App",
-    description: "",
-    link: "Learn more",
-  },
-  {
-    name: "Food Delivery App",
-    description: "",
+    name: "CV Writing",
+    description:
+      "As a professional CV writer, my focus is on helping job seekers create impactful resumes and cover letters that effectively highlight their skills, experience, and achievements. I work closely with my clients to understand their career goals and tailor their documents to showcase their unique strengths and qualifications.",
     link: "Learn more",
   },
 ];
@@ -42,31 +30,60 @@ const Services = () => {
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row">
           {/* text */}
-          <div className="flex-1 lg:bg-services lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12 lg:mb-0">
+          <motion.div
+            variants={fadeIn("right", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.5 }}
+            className="flex-1 lg:bg-services lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12 lg:mb-0"
+          >
             <h2 className="h2 text-accent mb-6">What I Do</h2>
             <h3 className="h3 max-w-[455px] mb-16">
               I am a Freelance Front-end developer with 3 years of experience
             </h3>
             <button className="btn btn-sm">See my work</button>
-          </div>
+          </motion.div>
           {/* services */}
-          <div lassName="flex-1">
+          <motion.div
+            variants={fadeIn("left", 0.5)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.5 }}
+            className="flex-1"
+          >
             {/* services */}
-            <div className="">
+            <div className="  ">
               {services.map((service, index) => {
                 const { name, description, link } = service;
                 return (
-                  <div key={index}>
+                  <div
+                    className="border-b border-white/20 max-h-[100%] mb-[38px] flex"
+                    key={index}
+                  >
                     <div className="max-w-[476px]">
-                      <h4>{name}</h4>
-                      <p>{description}</p>
+                      <h4 className="text-[20px] tracking-wider font-primary font-semibold mb-6 ">
+                        {name}
+                      </h4>
+                      <p className="font-secondary leading-tight py-4">
+                        {description}
+                      </p>
                     </div>
-                    <div>links</div>
+                    {/* <div className="flex flex-col flex-1 items-end">
+                      <a
+                        className="btn w-9 h-9 mb-[42px] flex justify-center items-center"
+                        href="#"
+                      >
+                        <BsArrowUpRight />
+                      </a>
+                      <a className="text-gradient text-[10px]" href="#">
+                        {link}
+                      </a>
+                    </div> */}
                   </div>
                 );
               })}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
