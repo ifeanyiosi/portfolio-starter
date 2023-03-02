@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import Img1 from "../assets/smg.png";
 import Img2 from "../assets/svtb.png";
-import Img3 from "../assets/pwa.png";
+// import Img3 from "../assets/pwa.png";
 import Img4 from "../assets/nike.png";
 
 const Work = () => {
@@ -27,7 +27,9 @@ const Work = () => {
                 Here are a few of the live projects I have worked on
               </p>
 
-              <button className="btn btn-sm">View all projects</button>
+              <button className="btn btn-sm">
+                <a href="https://github.com/ifeanyiosi">View all on Github</a>
+              </button>
             </div>
 
             {/* image */}

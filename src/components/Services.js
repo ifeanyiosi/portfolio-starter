@@ -1,6 +1,6 @@
 import React from "react";
-import { BsArrowUpRight } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 import { fadeIn } from "../variants";
 
 const services = [
@@ -41,7 +41,17 @@ const Services = () => {
             <h3 className="h3 max-w-[455px] mb-16">
               I am a Freelance Front-end developer with 3 years of experience
             </h3>
-            <button className="btn btn-sm">See my work</button>
+            <button className="btn btn-sm">
+              <Link
+                activeClass="active"
+                smooth={true}
+                spy={true}
+                to="work"
+                className="cursor-pointer  flex items-center justify-center"
+              >
+                See my works
+              </Link>
+            </button>
           </motion.div>
           {/* services */}
           <motion.div
@@ -54,7 +64,7 @@ const Services = () => {
             {/* services */}
             <div className="  ">
               {services.map((service, index) => {
-                const { name, description, link } = service;
+                const { name, description } = service;
                 return (
                   <div
                     className="border-b border-white/20 max-h-[100%] mb-[38px] flex"

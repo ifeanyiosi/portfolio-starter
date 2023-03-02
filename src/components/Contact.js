@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section id="contact" className=" py-16 lg:section ">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col lg:flex-row mb-8">
           {/* text */}
 
           <motion.div
@@ -36,23 +36,17 @@ const Contact = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start "
+            className="flex-1 border rounded-2xl flex flex-col gap-y-6 mb-24 mt-4 p-6 items-start "
           >
-            <input
-              className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all "
-              type="text"
-              placeholder="Your name"
-            />
-            <input
-              className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all "
-              type="text"
-              placeholder="Your email"
-            />
-            <textarea
-              placeholder="Your message"
-              className="bg-transparent border-b py-12 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12"
-            ></textarea>
-            <button className="btn btn-lg">Send message</button>
+            <div className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all ">
+              <span>Ifeanyi Osi-Okeke</span>
+            </div>
+            <div className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all ">
+              <span>ifeanyi.osi.okeke@gmail.com</span>
+            </div>
+            <div className="bg-transparent  py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all ">
+              <span>+2348034476993</span>
+            </div>
           </motion.form>
         </div>
       </div>

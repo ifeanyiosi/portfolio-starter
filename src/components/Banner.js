@@ -3,6 +3,7 @@ import Image from "../assets/avatar.svg";
 import { FaGithub, FaBehance, FaLinkedin } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 import { fadeIn } from "../variants";
 
 const Banner = () => {
@@ -34,14 +35,7 @@ const Banner = () => {
               >
                 <span className="mr-4 text-white">I am a</span>
                 <TypeAnimation
-                  sequence={[
-                    "Developer",
-                    2000,
-                    "Mobile Developer",
-                    2000,
-                    "Gamer",
-                    2000,
-                  ]}
+                  sequence={["Developer", 2000, "Gamer", 2000]}
                   speed={50}
                   className="text-accent"
                   wrapper="span"
@@ -68,9 +62,22 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
             >
-              <button className="btn btn-lg">Contact me</button>
-              <a href="#" className="text-gradient btn-link">
-                My Portfolio
+              <button className="btn btn-lg">
+                <Link
+                  activeClass="active"
+                  smooth={true}
+                  spy={true}
+                  to="contact"
+                  className="cursor-pointer flex items-center justify-center"
+                >
+                  Contact me
+                </Link>
+              </button>
+              <a
+                href="https://drive.google.com/file/d/1d1wqvESH4yTn5O7JGnqwmaQCFIwlJ8qs/view?usp=share_link"
+                className="text-gradient btn-link"
+              >
+                My Resume
               </a>
             </motion.div>
             {/* socials */}
